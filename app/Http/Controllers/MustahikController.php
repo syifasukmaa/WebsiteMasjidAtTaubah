@@ -26,7 +26,7 @@ class MustahikController extends Controller
         }
 
         return view('admin.zakat.mustahik.dashboard', [
-            'mustahiks' => $mustahik->get(),
+            'mustahiks' => $mustahik->paginate(5),
         ]);
     }
 

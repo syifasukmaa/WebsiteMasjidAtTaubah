@@ -10,10 +10,12 @@
                 <div class="flex-none w-full max-w-full px-3">
                     <div class="flex justify-between">
                         <div class="inline-flex shadow-sm" role="group">
-                            <a href="{{ route('admin.muzakki.index') }}"
-                                class="{{ Request::is('admin/zakat/muzakki') ? 'bg-blue text-base text-white py-2.5' : 'text-sm py-3' }}  px-3 font-medium text-gray-900  border border-slate-600 hover:bg-sky-600 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white rounded-s-lg h-fit">
-                                Muzakki
-                            </a>
+                            @cannot('ketua_rt')
+                                <a href="{{ route('admin.muzakki.index') }}"
+                                    class="{{ Request::is('admin/zakat/muzakki') ? 'bg-blue text-base text-white py-2.5' : 'text-sm py-3' }}  px-3 font-medium text-gray-900  border border-slate-600 hover:bg-sky-600 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white rounded-s-lg h-fit">
+                                    Muzakki
+                                </a>
+                            @endcannot
 
 
                             <a href="{{ route('zakatMustahik.index') }}"
@@ -53,6 +55,7 @@
                         class="relative flex flex-col min-w-0 mt-5 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
                         <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
                             <h6 class="mb-2 font-medium text-hijau2">Data Muzakki</h6>
+                            {{ $zakats->links() }}
                         </div>
                         <div class="flex-auto px-0 pt-0 pb-2">
                             <div class="p-0 overflow-x-auto">

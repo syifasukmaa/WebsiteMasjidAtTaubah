@@ -27,7 +27,7 @@ class PendaftarQurbanController extends Controller
         return view(
             'admin.qurban.pendaftarQurban.dashboard',
             [
-                'qurbans' => $qurbans->get()
+                'qurbans' => $qurbans->paginate(5),
             ]
         );
     }

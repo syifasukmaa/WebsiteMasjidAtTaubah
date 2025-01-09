@@ -42,28 +42,30 @@
                     <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Zakat</span>
                 </a>
             </li>
-            <li class="mt-0.5 w-full">
-                <a class="{{ Request::is('admin/qurban/*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none' }} py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-slate-700"
-                    href="{{ route('pendaftarQurban.index') }}">
-                    <div
-                        class="{{ Request::is('admin/qurban/*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-white' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                            viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
-                                d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5Zm16 14a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2ZM4 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6Zm16-2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6Z" />
-                        </svg>
+            @cannot('ketua_rt')
+                <li class="mt-0.5 w-full">
+                    <a class="{{ Request::is('admin/qurban/*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none' }} py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-slate-700"
+                        href="{{ route('pendaftarQurban.index') }}">
+                        <div
+                            class="{{ Request::is('admin/qurban/*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-white' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5Zm16 14a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2ZM4 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6Zm16-2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6Z" />
+                            </svg>
 
-                    </div>
-                    <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Qurban</span>
-                </a>
-            </li>
+                        </div>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Qurban</span>
+                    </a>
+                </li>
+            @endcannot
 
             <li class="mt-0.5 w-full">
-                <a class="{{ Request::is('admin/yatimPiatu') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none' }} py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-slate-700"
+                <a class="{{ Request::is('admin/yatimPiatu*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none' }} py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-slate-700"
                     href="{{ route('yatimPiatu.index') }}">
                     <div
-                        class="{{ Request::is('admin/yatimPiatu') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-white' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        class="{{ Request::is('admin/yatimPiatu*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-white' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                             viewBox="0 0 24 24">
@@ -76,22 +78,24 @@
                 </a>
             </li>
 
-            <li class="mt-0.5 w-full">
-                <a class="{{ Request::is('admin/pengguna.*') ? 'shadow-soft-xl bg-slate-100' : 'shadow-none' }} py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
-                    href="{{ route('pengguna.index') }}">
-                    <div
-                        class="{{ Request::is('admin/pengguna/*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-white' }} shadow-soft-2xl  mr-2 flex h-8 w-8 items-center justify-center rounded-lg  bg-center stroke-0 text-center xl:p-2.5">
+            @cannot('ketua_rt')
+                <li class="mt-0.5 w-full">
+                    <a class="{{ Request::is('admin/pengguna*') ? 'shadow-soft-xl bg-slate-100' : 'shadow-none' }} py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
+                        href="{{ route('pengguna.index') }}">
+                        <div
+                            class="{{ Request::is('admin/pengguna*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-white' }} shadow-soft-2xl  mr-2 flex h-8 w-8 items-center justify-center rounded-lg  bg-center stroke-0 text-center xl:p-2.5">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <path fill="#383838" fill-rule="evenodd"
-                                d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4H6Zm7.25-2.095c.478-.86.75-1.85.75-2.905a5.973 5.973 0 0 0-.75-2.906 4 4 0 1 1 0 5.811ZM15.466 20c.34-.588.535-1.271.535-2v-1a5.978 5.978 0 0 0-1.528-4H18a4 4 0 0 1 4 4v1a2 2 0 0 1-2 2h-4.535Z"
-                                clip-rule="evenodd" />
-                        </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path fill="#383838" fill-rule="evenodd"
+                                    d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4H6Zm7.25-2.095c.478-.86.75-1.85.75-2.905a5.973 5.973 0 0 0-.75-2.906 4 4 0 1 1 0 5.811ZM15.466 20c.34-.588.535-1.271.535-2v-1a5.978 5.978 0 0 0-1.528-4H18a4 4 0 0 1 4 4v1a2 2 0 0 1-2 2h-4.535Z"
+                                    clip-rule="evenodd" />
+                            </svg>
 
-                    </div>
-                    <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Akun User</span>
-                </a>
-            </li>
+                        </div>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Akun User</span>
+                    </a>
+                </li>
+            @endcannot
 
             {{-- <li class="mt-0.5 w-full">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
@@ -162,14 +166,14 @@
 
 <main class="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen rounded-xl transition-all duration-200">
     <!-- Navbar -->
-    <nav class="relative flex flex-wrap items-center justify-between px-0 py-2 mx-6 transition-all shadow-none duration-250 ease-soft-in rounded-2xl lg:flex-nowrap lg:justify-start"
+    <nav class="relative flex flex-wrap items-center px-0 py-2 mx-6 transition-all shadow-none duration-250 ease-soft-in rounded-2xl lg:flex-nowrap lg:justify-start"
         navbar-main navbar-scroll="true">
         <div class="flex items-center justify-between w-full px-4 py-1 mx-auto flex-wrap-inherit">
             <nav>
 
                 <h6 class="mb-0 font-bold capitalize text-hijau1">Halaman {{ $title ?? 'Dashboard' }}</h6>
             </nav>
-            <div class="flex flex-row-reverse">
+            <div class="flex flex-row-reverse content-end">
                 <div class="flex items-center font-medium text-wrap">
                     <svg class="w-10 h-10 text-gray-800 dark:text-white" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -180,7 +184,7 @@
                     <h3 class="w-full ml-2 h-fit text-orange2">{{ Auth::user()->name }}</h3>
                 </div>
                 <ul class="flex flex-row items-center justify-end pl-0 mb-0 mr-2 list-none md-max:w-full">
-                    <li class="flex items-center pl-4 xl:hidden">
+                    <li class="flex items-center xl:hidden">
                         <a href="javascript:;" class="block p-0 text-sm transition-all ease-nav-brand text-slate-500"
                             sidenav-trigger>
                             <div class="w-4.5 overflow-hidden">
@@ -192,7 +196,6 @@
                             </div>
                         </a>
                     </li>
-
                 </ul>
             </div>
         </div>

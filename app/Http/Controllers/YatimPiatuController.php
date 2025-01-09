@@ -11,8 +11,18 @@ class YatimPiatuController extends Controller
 {
     public function index()
     {
+        $yatims = YatimPiatu::with('RTWarga')->latest();
+        if (request('search')) {
+            $yatims->where('nama', 'like', '%' . request('search') . '%')
+                ->orWhere('nama_ibu', 'like', '%' . request('search') . '%')
+                ->orWhere('nama_ayah', 'like', '%' . request('search') . '%')
+                ->orWhereHas('RTWarga', function ($query) {
+                    $query->where('nomor_RT', 'like', '%' . request('search') . '%');
+                })
+            ;
+        }
         return view('admin.yatimpiatu.dashboard', [
-            'yatims' => YatimPiatu::all()
+            'yatims' => $yatims->paginate(5),
         ]);
     }
 

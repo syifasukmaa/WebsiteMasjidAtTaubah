@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/img/apple-icon.png') }}" />
-    <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
-    <title>Data Zakat</title>
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/logoMasjid.png') }}" />
+    <title>Login Admin</title>
     @include('admin.layouts.partials.links')
     @vite('resources/css/app.css')
 </head>
@@ -14,7 +13,6 @@
 <body class="m-0 font-sans text-base antialiased font-normal bg-white text-start leading-default text-slate-500">
     <div class="container sticky top-0 z-sticky">
         <div class="flex flex-wrap -mx-3">
-
         </div>
     </div>
     <main class="mt-0 transition-all duration-200 ease-soft-in-out">
@@ -28,9 +26,9 @@
                                 class="relative flex flex-col min-w-0 mt-32 break-words bg-transparent border-0 shadow-none rounded-2xl bg-clip-border">
                                 <div class="p-6 pb-0 mb-0 bg-transparent border-b-0 rounded-t-2xl">
                                     <h3
-                                        class="relative z-10 text-lg font-bold text-transparent bg-gradient-to-tl from-hijau1 to-hijau2 bg-clip-text">
+                                        class="relative z-10 text-2xl font-semibold tracking-normal text-transparent bg-gradient-to-tl from-hijau1 to-hijau2 bg-clip-text">
                                         Selamat Datang</h3>
-                                    <p class="mb-0">Masukkan Email dan Kata Sandi Untuk Login Dashboard</p>
+                                    <p class="mt-2 mb-0">Masukkan Email dan Kata Sandi Untuk Login Dashboard</p>
                                 </div>
                                 <div class="flex-auto p-6">
 
@@ -40,9 +38,9 @@
                                         <!-- Email Address -->
                                         <div>
                                             <x-input-label for="email" :value="__('Email')" />
-                                            <x-text-input id="email" class="block w-full mt-1" type="email"
+                                            <x-text-input id="email" class="block w-full mt-2" type="email"
                                                 name="email" :value="old('email')" required autofocus
-                                                autocomplete="username" />
+                                                autocomplete="username" placeholder="Masukkan Email Anda" />
                                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                         </div>
 
@@ -50,8 +48,9 @@
                                         <div class="mt-4">
                                             <x-input-label for="password" :value="__('Password')" />
 
-                                            <x-text-input id="password" class="block w-full mt-1" type="password"
-                                                name="password" required autocomplete="current-password" />
+                                            <x-text-input id="password" class="block w-full mt-2" type="password"
+                                                name="password" required autocomplete="current-password"
+                                                placeholder="Masukkan Kata Sandi" />
 
                                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                         </div>
@@ -74,10 +73,10 @@
 
                             </div>
                         </div>
-                        <div class="w-full max-w-full px-3 lg:flex-0 shrink-0 md:w-6/12">
+                        <div class="w-full h-screen max-w-full px-3 lg:flex-0 shrink-0 md:w-6/12">
                             <div
                                 class="absolute top-0 hidden w-3/5 h-full -mr-32 overflow-hidden -skew-x-10 -right-40 rounded-bl-xl md:block">
-                                <div class="absolute inset-x-0 top-0 z-0 w-3/4 h-full -ml-16 bg-center bg-no-repeat bg-contain bg-hijau3 left-2 skew-x-10"
+                                <div class="absolute inset-x-0 top-0 z-0 w-3/4 h-full -ml-16 bg-center bg-no-repeat bg-auto bg-teal-50 left-2 skew-x-10"
                                     style="background-image: url('{{ asset('/assets/img/logoMasjid.png') }}')"></div>
                             </div>
                         </div>

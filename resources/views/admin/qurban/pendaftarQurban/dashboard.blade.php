@@ -30,7 +30,7 @@
                         </div>
 
                         <a href="{{ route('pendaftarQurban.create') }}"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah
+                            class="text-white bg-blue hover:bg-sky-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mt-2 md:mt-0 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-fit">Tambah
                             Data</a>
                     </div>
                 </div>
@@ -38,7 +38,8 @@
                 <div
                     class="relative flex flex-col min-w-0 mt-5 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
                     <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
-                        <h6>Data Pendaftar Qurban</h6>
+                        <h6 class="mb-2 font-medium text-hijau2">Data Pendaftar Qurban</h6>
+                        {{ $qurbans->links() }}
                     </div>
                     <div class="flex-auto px-0 pt-0 pb-2">
                         <div class="p-0 overflow-x-auto">
@@ -87,18 +88,18 @@
                                                     class="text-sm font-semibold leading-tight text-slate-800">{{ $qurban->nomor_antrian }}</span>
                                             </td>
                                             <td
-                                                class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
+                                                class="p-2 text-center capitalize align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                                 <span
                                                     class="text-sm font-semibold leading-tight text-slate-800">{{ $qurban->nama }}</span>
                                             </td>
 
                                             <td
-                                                class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
+                                                class="p-2 text-center capitalize align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                                 <span
                                                     class="text-sm font-semibold leading-tight text-slate-800">{{ $qurban->jenis_hewan }}</span>
                                             </td>
                                             <td
-                                                class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
+                                                class="p-2 text-center capitalize align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                                 <span
                                                     class="text-sm font-semibold leading-tight text-slate-800">{{ $qurban->hak_pengqurban }}</span>
                                             </td>
@@ -108,7 +109,7 @@
                                                     class="text-sm font-semibold leading-tight text-slate-800">{{ $qurban->RTWarga->nomor_RT }}</span>
                                             </td>
                                             <td
-                                                class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
+                                                class="p-2 text-center capitalize align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                                 <span
                                                     class="text-sm font-semibold leading-tight text-slate-800">{{ $qurban->status_pembayaran }}</span>
                                             </td>

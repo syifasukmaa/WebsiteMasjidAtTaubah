@@ -5,10 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
-
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <title>Masjid Jami At Taubah Juanda</title>
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/logoMasjid.png') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     @include('admin.layouts.partials.links')
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -28,6 +32,13 @@
             ::after,
             ::before {
                 --tw-content: ''
+            }
+
+            .swiper-slide img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 8px;
             }
 
             :host,
@@ -907,18 +918,26 @@
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-        {{-- <img id="background" class="absolute -left-20 top-0 max-w-[90%]"
-            src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" /> --}}
         <div
-            class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-            <div class="relative w-full max-w-2xl px-6 lg:max-w-full">
+            class="relative flex flex-col items-center justify-center min-h-screen selection:bg-green-400 selection:text-white">
+            <div class="relative w-full max-w-2xl md:max-w-full">
+                <div class="py-2 overflow-hidden bg-green-100 border border-green-600 marquee-masjid-interaktif">
+                    <p class="inline-block font-medium text-green-800 whitespace-nowrap animate-marquee">
+                        🕌 <a href="#jadwal-sholat" class="text-green-700 hover:text-green-900">Selamat datang di Masjid
+                            Jami At Taubah</a> |
+                        📖 <a href="#pengajian" class="text-green-700 hover:text-green-900">Pengajian Mingguan</a> |
+                        🌙 <a href="#ramadhan" class="text-green-700 hover:text-green-900">Kegiatan Bulan Ramadhan</a> |
+                        🕋 <a href="#donasi" class="text-green-700 hover:text-green-900">Donasi Masjid</a>
+                    </p>
+                </div>
+
                 <nav
-                    class="absolute top-0 left-0 right-0 z-30 flex flex-wrap items-center px-4 py-2 mx-6 my-4 shadow-2xl rounded-xl bg-white/80 backdrop-blur-lg backdrop-saturate-100 lg:flex-nowrap lg:justify-start">
+                    class="absolute left-0 right-0 z-30 flex flex-wrap items-center px-4 py-2 mx-6 my-4 shadow-2xl top-10 rounded-xl bg-white/80 backdrop-blur-lg backdrop-saturate-100 lg:flex-nowrap lg:justify-start">
                     <div class="flex items-center justify-between w-full p-0 pl-6 mx-auto flex-wrap-inherit">
                         <img class="w-[13%] md:w-[8%] lg:w-[5%]  block mr-14"
                             src="{{ asset('assets/img/logoMasjid.png') }}"" alt="Logo Masjid At Taubah">
                         <button navbar-trigger
-                            class="px-3 py-1 ml-2 text-lg leading-none transition-all ease-out bg-transparent border border-transparent rounded-lg shadow-none cursor-pointer lg:hidden"
+                            class="px-3 py-1 ml-2 text-lg leading-none transition-all ease-out bg-transparent border-2 rounded-lg shadow-none cursor-pointer border-hijau1 lg:hidden"
                             type="button" aria-controls="navigation" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <span
@@ -934,30 +953,37 @@
                         <div navbar-menu
                             class="items-center justify-end overflow-hidden transition-all duration-500 ease-soft lg-max:max-h-0 basis-full lg:flex lg:basis-auto">
                             <ul class="flex flex-col justify-end pl-0 mx-auto mb-0 list-none lg:flex-row xl:ml-auto">
-                                <li>
+                                <li class="text-xl">
                                     <a class="flex items-center px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
-                                        aria-current="page" href="">
+                                        aria-current="page" href="#beranda">
                                         <i class="mr-1 fa fa-chart-pie opacity-60"></i>
                                         Beranda
                                     </a>
                                 </li>
+                                <li class="text-xl">
+                                    <a class="flex items-center px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
+                                        aria-current="page" href="#jadwalSholat">
+                                        <i class="mr-1 fa fa-chart-pie opacity-60"></i>
+                                        Jadwal Sholat
+                                    </a>
+                                </li>
                                 <li>
                                     <a class="block px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
-                                        href="">
+                                        href="#fasilitas">
                                         <i class="mr-1 fa fa-user opacity-60"></i>
                                         Fasilitas
                                     </a>
                                 </li>
                                 <li>
                                     <a class="block px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
-                                        href="">
+                                        href="#layanan">
                                         <i class="mr-1 fas fa-user-circle opacity-60"></i>
-                                        Kegiatan
+                                        Layanan
                                     </a>
                                 </li>
                                 <li>
                                     <a class="block px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
-                                        href="">
+                                        href="#galeri">
                                         <i class="mr-1 fas fa-key opacity-60"></i>
                                         Galeri
                                     </a>
@@ -966,298 +992,308 @@
                         </div>
                     </div>
                 </nav>
-                <main class="mt-32">
-                    <header class="grid gap-6 lg:grid-cols-2">
-
-                        <div class="w-full rounded-2xl h-[550px] bg-left bg-no-repeat bg-cover"
-                            style="background-image: url('{{ asset('assets/img/masjid.jpg') }}')">
+                <main class="mt-24 lg:mt-32">
+                    <header id="beranda" class="relative flex items-center justify-center h-screen overflow-hidden">
+                        <div class="absolute inset-0 z-0 w-full h-full bg-center bg-cover"
+                            style="background-image: url('{{ asset('assets/img/masjid.jpg') }}');">
+                            <div class="absolute inset-0 bg-black opacity-50"></div>
                         </div>
-                        <div class="flex flex-col justify-center w-full">
-
-                            <h1 class="mb-3 text-3xl font-bold text-center text-hijau2">Masjid Jami At Taubah</h1>
-                            <p class="mb-1 text-lg">Masjid Jami At Taubah merupakan salah satu masjid yang ada di Kota
-                                Depok, terletak di
-                                Jalan. Ir. H. Juanda No.Km.2, RW.16, Kel. Baktijaya,
-                                Kec. Sukmajaya.</p>
-                            <p class="mb-1 text-lg">Masjid Jami At Taubah mempunyai berbagai kegiatan seperti pengajia,
-                                santunan anak yatim,
-                                acara besar islam seperti maulid nabi, isro miraj.</p>
-                            <p class="mb-4 text-lg">Masjid Jami At Taubah menyediakan gedung serbaguna yang dapat
-                                digunakan untuk berbagai
-                                acara seperti pernikahan, pengajian dan sebagainya.</p>
-
-                            <a href="" class="p-3 text-white rounded-md btn btn-primary bg-hijau1 w-fit">Menyewa
-                                Gedung
-                                Serba Guna</a>
+                        <div
+                            class="relative z-10 flex flex-col items-center justify-center max-w-3xl p-5 text-white rounded-lg">
+                            <h1 class="mb-5 text-3xl font-bold text-center text-white uppercase lg:text-5xl">
+                                Masjid Jami At Taubah
+                            </h1>
+                            <p class="mb-3 text-base text-center md:text-lg">Masjid Jami At Taubah merupakan salah satu
+                                masjid yang
+                                ada di Kota
+                                Depok, terletak di Jalan. Ir. H. Juanda No.Km.2, RW.16, Kel. Baktijaya, Kec. Sukmajaya.
+                            </p>
+                            <a href=""
+                                class="p-3 mt-4 text-white transition-all ease-in-out rounded-md shadow-md md:mt-8 btn btn-primary bg-hijau1 w-fit hover:bg-hijau2 hover:scale-105">Menyewa
+                                Gedung Serba Guna</a>
                         </div>
                     </header>
 
-                    <div class="mt-14">
-                        <h1 class="text-2xl font-medium text-center text-hijau1">Jadwal Sholat</h1>
+                    <div class="mt-14" id="jadwalSholat">
+                        <h1
+                            class="text-2xl font-bold tracking-wide text-center md:text-3xl text-hijau1 hover:underline">
+                            Jadwal Sholat
+                        </h1>
+                        <p class="text-lg text-center text-hijau2">Depok, Sukmajaya</p>
                         <p class="text-lg text-center text-hijau2" id="date_sholat">Hari</p>
-                        <div class="grid gap-3 mt-5 md:grid-cols-3 lg:grid-cols-6">
+                        <div class="grid grid-cols-6 gap-1 mt-5 lg:px-14 lg:gap-3">
                             <div
-                                class="block p-6 text-center bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Imsak
+                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-gray-100">
+                                <h5
+                                    class="mb-2 text-sm font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
+                                    🌘
+                                    Imsak
                                 </h5>
                                 <p class="font-normal text-gray-700 dark:text-gray-400 imsak">Pukul </p>
                             </div>
                             <div
-                                class="block p-6 text-center bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Subuh
+                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-slate-300 hover:bg-gray-100">
+                                <h5
+                                    class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
+                                    🌅
+                                    Subuh
                                 </h5>
                                 <p class="font-normal text-gray-700 dark:text-gray-400 subuh">Pukul </p>
                             </div>
                             <div
-                                class="block p-6 text-center bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Dzuhur
+                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-gray-100">
+                                <h5
+                                    class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
+                                    🌞
+                                    Dzuhur
                                 </h5>
                                 <p class="font-normal text-gray-700 dark:text-gray-400 dzuhur">Pukul </p>
                             </div>
                             <div
-                                class="block p-6 text-center bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Ashar
+                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-slate-300 hover:bg-gray-100">
+                                <h5
+                                    class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
+                                    🌤️
+                                    Ashar
                                 </h5>
                                 <p class="font-normal text-gray-700 dark:text-gray-400 ashar">Pukul </p>
                             </div>
                             <div
-                                class="block p-6 text-center bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Maghrib
+                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-gray-100">
+                                <h5
+                                    class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
+                                    🌌
+                                    Maghrib
                                 </h5>
                                 <p class="font-normal text-gray-700 dark:text-gray-400 maghrib">Pukul </p>
                             </div>
                             <div
-                                class="block p-6 text-center bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Isya
+                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-slate-300 hover:bg-gray-100">
+                                <h5
+                                    class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
+                                    🌙 Isya
                                 </h5>
                                 <p class="font-normal text-gray-700 dark:text-gray-400 isya">Pukul </p>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-10">
-                        <h1 class="text-2xl font-medium text-center text-hijau1">Layanan dan Bantuan Masjid</h1>
-                        <div class="grid grid-cols-5 gap-6 mt-5">
-                            <div
-                                class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                <img class="rounded-t-lg" src="{{ asset('assets/img/zakat.jpeg') }}" alt="" />
-
-                                <div class="p-5">
-                                    <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Pembayaran Zakat</h3>
+                    <div class="px-8 py-16 border border-gray-200 rounded-lg shadow-lg lg:mt-24 mt-14 bg-gradient-to-r from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
+                        id="layanan">
+                        <h1
+                            class="text-2xl font-bold tracking-wide text-center text-white md:text-3xl hover:underline">
+                            Layanan dan
+                            Bantuan
+                            Masjid</h1>
+                        <div class="mt-10 md:mt-14 swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div
+                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg" src="{{ asset('assets/img/zakat.jpeg') }}"
+                                            alt="zakat" />
+                                        <div class="p-5">
+                                            <h3
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
+                                                Pembayaran Zakat</h3>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg" src="{{ asset('assets/img/hewanqurban.jpeg') }}"
+                                            alt=" Pendaftaran Hewan Qurban" />
+                                        <div class="p-5">
+                                            <h3
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
+                                                Pendaftaran Hewan Qurban</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg" src="{{ asset('assets/img/santunan.jpg') }}"
+                                            alt="Santunan Yatim Piatu" />
+                                        <div class="p-5">
+                                            <h3
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
+                                                Santunan Yatim Piatu</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg" src="{{ asset('assets/img/pengajianBulanan.jpg') }}"
+                                            alt=" Pengajian Bulana" />
+                                        <div class="p-5">
+                                            <h3
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
+                                                Pengajian Bulanan</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg" src="{{ asset('assets/img/penggalanganDana.jpg') }}"
+                                            alt=" Penggalangan Dana" />
+                                        <div class="p-5">
+                                            <h3
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
+                                                Penggalangan Dana</h3>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add more slides as needed -->
                             </div>
-                            <div
-                                class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                <img class="rounded-t-lg" src="{{ asset('assets/img/hewanqurban.jpeg') }}"
-                                    alt="" />
+                        </div>
 
-                                <div class="p-5">
-                                    <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Pendaftaran Hewan Qurban</h3>
-                                </div>
-                            </div>
-                            <div
-                                class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                <img class="rounded-t-lg" src="{{ asset('assets/img/santunan.jpg') }}" alt="" />
+                    </div>
+                    <div class="px-8 py-16 lg:mt-24 mt-14" id="fasilitas">
+                        <h1 class="text-3xl font-bold tracking-wide text-center text-hijau1 hover:underline">Fasilitas
+                            Masjid</h1>
+                        <div class="mt-10 lg:mt-14 swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div
+                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg" src="{{ asset('assets/img/kainkafan.jpg') }}"
+                                            alt="Kain Kafan" />
+                                        <div class="p-5">
+                                            <h3
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
+                                                Kain Kafan</h3>
 
-                                <div class="p-5">
-                                    <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Santunan Yatim Piatu</h3>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div
-                                class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                <img class="rounded-t-lg" src="{{ asset('assets/img/santunan.jpg') }}" alt="" />
+                                <div class="swiper-slide">
+                                    <div
+                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg" src="{{ asset('assets/img/GSM.jpg') }}"
+                                            alt="Fasilitas 2" />
+                                        <div class="p-5">
+                                            <h3
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
+                                                Gedung Serba Guna</h3>
 
-                                <div class="p-5">
-                                    <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Pengajian Bulanan</h3>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div
-                                class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                <img class="rounded-t-lg" src="{{ asset('assets/img/santunan.jpg') }}"
-                                    alt="" />
-
-                                <div class="p-5">
-                                    <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Pengajian TPQ</h3>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg" src="{{ asset('assets/img/tempatsholat.jpg') }}"
+                                            alt="tempat sholat" />
+                                        <div class="p-5">
+                                            <h3
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
+                                                Tempat Sholat</h3>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg" src="{{ asset('assets/img/toilet.jpg') }}"
+                                            alt="Fasilitas 3" />
+                                        <div class="p-5">
+                                            <h3
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
+                                                Toilet Wanita dan Pria</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg" src="{{ asset('assets/img/AC.jpg') }}"
+                                            alt="Fasilitas 3" />
+                                        <div class="p-5">
+                                            <h3
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
+                                                Air Conditioner</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add more slides as needed -->
                             </div>
                         </div>
                     </div>
-                    <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-
-
-                        <a href="https://laravel.com/docs" id="docs-card"
-                            class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                            <div id="screenshot-container" class="relative flex items-stretch flex-1 w-full">
-                                <img src="https://laravel.com/assets/img/welcome/docs-light.svg"
-                                    alt="Laravel documentation screenshot"
-                                    class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
-                                    onerror="
-                                            document.getElementById('screenshot-container').classList.add('!hidden');
-                                            document.getElementById('docs-card').classList.add('!row-span-1');
-                                            document.getElementById('docs-card-content').classList.add('!flex-row');
-                                            document.getElementById('background').classList.add('!hidden');
-                                        " />
-                                <img src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                    alt="Laravel documentation screenshot"
-                                    class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block" />
-                                <div
-                                    class="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900">
-                                </div>
+                    <div class="px-8 py-16 border border-gray-200 rounded-lg shadow-lg lg:mt-24 mt-14 bg-gradient-to-r from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
+                        id="galeri">
+                        <h1 class="text-3xl font-bold tracking-wide text-center text-white hover:underline">Galeri
+                            Masjid</h1>
+                        <div class="grid grid-cols-2 gap-4 mt-8 md:mt-14 md:grid-cols-3">
+                            <div>
+                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
+                                    src="{{ asset('assets/img/galeri2.jpg') }}" alt="fotoGaleri">
                             </div>
-
-                            <div class="relative flex items-center gap-6 lg:items-end">
-                                <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-                                    <div
-                                        class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                        <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24">
-                                            <path fill="#FF2D20"
-                                                d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z" />
-                                            <path fill="#FF2D20"
-                                                d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z" />
-                                        </svg>
-                                    </div>
-
-                                    <div class="pt-3 sm:pt-5 lg:pt-0">
-                                        <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
-
-                                        <p class="mt-4 text-sm/relaxed">
-                                            Laravel has wonderful documentation covering every aspect of the framework.
-                                            Whether you are a newcomer or have prior experience with Laravel, we
-                                            recommend reading our documentation from beginning to end.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <svg class="size-6 shrink-0 stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 24 24" stroke-width="1.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                                </svg>
+                            <div>
+                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
+                                    src="{{ asset('assets/img/galeri3.jpg') }}" alt="fotoGaleri">
                             </div>
-                        </a>
-
-                        <a href="https://laracasts.com"
-                            class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                            <div
-                                class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24">
-                                    <g fill="#FF2D20">
-                                        <path
-                                            d="M24 8.25a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v12a2.5 2.5 0 0 0 2.5 2.5h19a2.5 2.5 0 0 0 2.5-2.5v-12Zm-7.765 5.868a1.221 1.221 0 0 1 0 2.264l-6.626 2.776A1.153 1.153 0 0 1 8 18.123v-5.746a1.151 1.151 0 0 1 1.609-1.035l6.626 2.776ZM19.564 1.677a.25.25 0 0 0-.177-.427H15.6a.106.106 0 0 0-.072.03l-4.54 4.543a.25.25 0 0 0 .177.427h3.783c.027 0 .054-.01.073-.03l4.543-4.543ZM22.071 1.318a.047.047 0 0 0-.045.013l-4.492 4.492a.249.249 0 0 0 .038.385.25.25 0 0 0 .14.042h5.784a.5.5 0 0 0 .5-.5v-2a2.5 2.5 0 0 0-1.925-2.432ZM13.014 1.677a.25.25 0 0 0-.178-.427H9.101a.106.106 0 0 0-.073.03l-4.54 4.543a.25.25 0 0 0 .177.427H8.4a.106.106 0 0 0 .073-.03l4.54-4.543ZM6.513 1.677a.25.25 0 0 0-.177-.427H2.5A2.5 2.5 0 0 0 0 3.75v2a.5.5 0 0 0 .5.5h1.4a.106.106 0 0 0 .073-.03l4.54-4.543Z" />
-                                    </g>
-                                </svg>
+                            <div>
+                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
+                                    src="{{ asset('assets/img/galeri1.jpg') }}" alt="fotoGaleri">
                             </div>
-
-                            <div class="pt-3 sm:pt-5">
-                                <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
-
-                                <p class="mt-4 text-sm/relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript
-                                    development. Check them out, see for yourself, and massively level up your
-                                    development skills in the process.
-                                </p>
+                            <div>
+                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
+                                    src="{{ asset('assets/img/galeri4.jpg') }}" alt="fotoGaleri">
                             </div>
-
-                            <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laravel-news.com"
-                            class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                            <div
-                                class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24">
-                                    <g fill="#FF2D20">
-                                        <path
-                                            d="M8.75 4.5H5.5c-.69 0-1.25.56-1.25 1.25v4.75c0 .69.56 1.25 1.25 1.25h3.25c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z" />
-                                        <path
-                                            d="M24 10a3 3 0 0 0-3-3h-2V2.5a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2V20a3.5 3.5 0 0 0 3.5 3.5h17A3.5 3.5 0 0 0 24 20V10ZM3.5 21.5A1.5 1.5 0 0 1 2 20V3a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v17c0 .295.037.588.11.874a.5.5 0 0 1-.484.625L3.5 21.5ZM22 20a1.5 1.5 0 1 1-3 0V9.5a.5.5 0 0 1 .5-.5H21a1 1 0 0 1 1 1v10Z" />
-                                        <path
-                                            d="M12.751 6.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 7.3v-.5a.75.75 0 0 1 .751-.753ZM12.751 10.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 11.3v-.5a.75.75 0 0 1 .751-.753ZM4.751 14.047h10a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-10A.75.75 0 0 1 4 15.3v-.5a.75.75 0 0 1 .751-.753ZM4.75 18.047h7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-7.5A.75.75 0 0 1 4 19.3v-.5a.75.75 0 0 1 .75-.753Z" />
-                                    </g>
-                                </svg>
+                            <div>
+                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
+                                    src="{{ asset('assets/img/galeri6.jpg') }}" alt="fotoGaleri">
                             </div>
-
-                            <div class="pt-3 sm:pt-5">
-                                <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
-
-                                <p class="mt-4 text-sm/relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the
-                                    latest and most important news in the Laravel ecosystem, including new package
-                                    releases and tutorials.
-                                </p>
-                            </div>
-
-                            <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <div
-                            class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                            <div
-                                class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24">
-                                    <g fill="#FF2D20">
-                                        <path
-                                            d="M16.597 12.635a.247.247 0 0 0-.08-.237 2.234 2.234 0 0 1-.769-1.68c.001-.195.03-.39.084-.578a.25.25 0 0 0-.09-.267 8.8 8.8 0 0 0-4.826-1.66.25.25 0 0 0-.268.181 2.5 2.5 0 0 1-2.4 1.824.045.045 0 0 0-.045.037 12.255 12.255 0 0 0-.093 3.86.251.251 0 0 0 .208.214c2.22.366 4.367 1.08 6.362 2.118a.252.252 0 0 0 .32-.079 10.09 10.09 0 0 0 1.597-3.733ZM13.616 17.968a.25.25 0 0 0-.063-.407A19.697 19.697 0 0 0 8.91 15.98a.25.25 0 0 0-.287.325c.151.455.334.898.548 1.328.437.827.981 1.594 1.619 2.28a.249.249 0 0 0 .32.044 29.13 29.13 0 0 0 2.506-1.99ZM6.303 14.105a.25.25 0 0 0 .265-.274 13.048 13.048 0 0 1 .205-4.045.062.062 0 0 0-.022-.07 2.5 2.5 0 0 1-.777-.982.25.25 0 0 0-.271-.149 11 11 0 0 0-5.6 2.815.255.255 0 0 0-.075.163c-.008.135-.02.27-.02.406.002.8.084 1.598.246 2.381a.25.25 0 0 0 .303.193 19.924 19.924 0 0 1 5.746-.438ZM9.228 20.914a.25.25 0 0 0 .1-.393 11.53 11.53 0 0 1-1.5-2.22 12.238 12.238 0 0 1-.91-2.465.248.248 0 0 0-.22-.187 18.876 18.876 0 0 0-5.69.33.249.249 0 0 0-.179.336c.838 2.142 2.272 4 4.132 5.353a.254.254 0 0 0 .15.048c1.41-.01 2.807-.282 4.117-.802ZM18.93 12.957l-.005-.008a.25.25 0 0 0-.268-.082 2.21 2.21 0 0 1-.41.081.25.25 0 0 0-.217.2c-.582 2.66-2.127 5.35-5.75 7.843a.248.248 0 0 0-.09.299.25.25 0 0 0 .065.091 28.703 28.703 0 0 0 2.662 2.12.246.246 0 0 0 .209.037c2.579-.701 4.85-2.242 6.456-4.378a.25.25 0 0 0 .048-.189 13.51 13.51 0 0 0-2.7-6.014ZM5.702 7.058a.254.254 0 0 0 .2-.165A2.488 2.488 0 0 1 7.98 5.245a.093.093 0 0 0 .078-.062 19.734 19.734 0 0 1 3.055-4.74.25.25 0 0 0-.21-.41 12.009 12.009 0 0 0-10.4 8.558.25.25 0 0 0 .373.281 12.912 12.912 0 0 1 4.826-1.814ZM10.773 22.052a.25.25 0 0 0-.28-.046c-.758.356-1.55.635-2.365.833a.25.25 0 0 0-.022.48c1.252.43 2.568.65 3.893.65.1 0 .2 0 .3-.008a.25.25 0 0 0 .147-.444c-.526-.424-1.1-.917-1.673-1.465ZM18.744 8.436a.249.249 0 0 0 .15.228 2.246 2.246 0 0 1 1.352 2.054c0 .337-.08.67-.23.972a.25.25 0 0 0 .042.28l.007.009a15.016 15.016 0 0 1 2.52 4.6.25.25 0 0 0 .37.132.25.25 0 0 0 .096-.114c.623-1.464.944-3.039.945-4.63a12.005 12.005 0 0 0-5.78-10.258.25.25 0 0 0-.373.274c.547 2.109.85 4.274.901 6.453ZM9.61 5.38a.25.25 0 0 0 .08.31c.34.24.616.561.8.935a.25.25 0 0 0 .3.127.631.631 0 0 1 .206-.034c2.054.078 4.036.772 5.69 1.991a.251.251 0 0 0 .267.024c.046-.024.093-.047.141-.067a.25.25 0 0 0 .151-.23A29.98 29.98 0 0 0 15.957.764a.25.25 0 0 0-.16-.164 11.924 11.924 0 0 0-2.21-.518.252.252 0 0 0-.215.076A22.456 22.456 0 0 0 9.61 5.38Z" />
-                                    </g>
-                                </svg>
-                            </div>
-
-                            <div class="pt-3 sm:pt-5">
-                                <h2 class="text-xl font-semibold text-black dark:text-white">Vibrant Ecosystem</h2>
-
-                                <p class="mt-4 text-sm/relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a
-                                        href="https://forge.laravel.com"
-                                        class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]">Forge</a>,
-                                    <a href="https://vapor.laravel.com"
-                                        class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Vapor</a>,
-                                    <a href="https://nova.laravel.com"
-                                        class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Nova</a>,
-                                    <a href="https://envoyer.io"
-                                        class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Envoyer</a>,
-                                    and <a href="https://herd.laravel.com"
-                                        class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Herd</a>
-                                    help you take your projects to the next level. Pair them with powerful open source
-                                    libraries like <a href="https://laravel.com/docs/billing"
-                                        class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Cashier</a>,
-                                    <a href="https://laravel.com/docs/dusk"
-                                        class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Dusk</a>,
-                                    <a href="https://laravel.com/docs/broadcasting"
-                                        class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Echo</a>,
-                                    <a href="https://laravel.com/docs/horizon"
-                                        class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Horizon</a>,
-                                    <a href="https://laravel.com/docs/sanctum"
-                                        class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Sanctum</a>,
-                                    <a href="https://laravel.com/docs/telescope"
-                                        class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Telescope</a>,
-                                    and more.
-                                </p>
+                            <div>
+                                <img class="h-auto max-w-full transition-all ease-in-out rounded-lg hover:scale-105"
+                                    src="{{ asset('assets/img/galeri5.jpg') }}" alt="fotoGaleri">
                             </div>
                         </div>
+                    </div>
+
+                    <div class="px-3 py-16 md:px-8 lg:mt-24 mt-14">
+                        <h1 class="mb-8 text-3xl font-bold tracking-wide text-center text-hijau1">Lokasi Masjid</h1>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4368505855245!2d106.8479536!3d-6.3799304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec77d6134e97%3A0xf5bedde41bf5124e!2sMasjid%20Jami'%20At-Taubah!5e0!3m2!1sen!2sid!4v1612309600000!5m2!1sen!2sid"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+
+
                     </div>
                 </main>
 
-                <footer class="py-16 text-sm text-center text-black dark:text-white/70">
-                    Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+
+                <footer class="m-4 overflow-hidden dark:bg-gray-800">
+                    <div class="w-full max-w-screen-xl p-4 mx-auto md:flex md:items-center md:justify-between">
+                        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a
+                                href="https://flowbite.com/" class="hover:underline">Masjid Jami At Taubah juanda Kota
+                                Depok</a>
+                        </span>
+                        <ul
+                            class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                            <li>
+                                <a href="#beranda" class="hover:underline me-4 md:me-6">Beranda</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline me-4 md:me-6">Jadwal Shglat</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline me-4 md:me-6">Fasilitas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline me-4 md:me-6">Layanan</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Galeri</a>
+                            </li>
+                        </ul>
+                    </div>
                 </footer>
+
             </div>
         </div>
     </div>
@@ -1266,7 +1302,7 @@
 <script>
     let getDate = new Date();
     let getYear = getDate.getFullYear();
-    let getMonth = getDate.getMonth();
+    let getMonth = getDate.getMonth() + 1; // Tambahkan 1 karena getMonth() dimulai dari 0 (Januari = 0)
     let getDay = getDate.getDate();
 
     function bulan() {
@@ -1289,7 +1325,7 @@
 
 
     let tanggal = getYear + '-' + bulan() + '-' + hari();
-    console.log(tanggal);
+    console.log('tanggal' + tanggal)
 
     function getSholat() {
         fetch(`https://api.myquran.com/v2/sholat/jadwal/1225/${tanggal}`)
@@ -1306,6 +1342,35 @@
             })
     }
     getSholat();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM Content Loaded');
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    });
 </script>
 
 </html>

@@ -16,7 +16,7 @@ class UserController extends Controller
                 ->orWhere('email', 'like', '%' . request('search') . '%');
         }
         return view('admin.users.dashboard', [
-            'users' => $users->get(),
+            'users' => $users->paginate(5),
         ]);
     }
     public function detail($id)
