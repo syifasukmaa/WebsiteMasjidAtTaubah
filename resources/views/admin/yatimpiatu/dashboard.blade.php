@@ -127,18 +127,17 @@
 
                                                 </a>
 
-                                                <form action="{{ route('yatimPiatu.delete', $yatim->id_yatim_piatu) }}"
+                                                {{-- <form action="{{ route('yatimPiatu.delete', $yatim->id_yatim_piatu) }}"
                                                     method="POST" class="w-fit">
                                                     @csrf
                                                     @method('DELETE')
                                                     <input type="submit" value="Hapus" data-modal-hide="popup-modal"
                                                         data-toggle="tooltip" title='Delete'
                                                         class="show_confirm text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
-                                                </form>
-
-
-                                                {{-- 
+                                                </form> --}}
                                                 <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                                                    data-id="{{ $yatim->id_yatim_piatu }}"
+                                                    data-action-url="{{ route('yatimPiatu.delete', ':id') }}"
                                                     class="block text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
                                                     type="button">
                                                     Hapus
@@ -175,7 +174,7 @@
                                                                 <div class="flex items-center justify-center">
 
                                                                     <form
-                                                                        action="{{ route('zakatMustahik.delete', $qurban->id_mustahik) }}"
+                                                                        action="{{ route('yatimPiatu.delete', $yatim->id_yatim_piatu) }}"
                                                                         method="POST" class="w-fit">
                                                                         @csrf
                                                                         @method('DELETE')
@@ -190,7 +189,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div> --}}
+                                                </div>
                                             </td>
                                         </tr>
                                     @endforeach

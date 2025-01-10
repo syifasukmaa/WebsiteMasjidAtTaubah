@@ -19,7 +19,7 @@
                 <a class="{{ Request::is('admin/zakat/*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none bg-transparent' }} py-2.7  text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg px-4 text-slate-700 transition-colors"
                     href="{{ route('admin.muzakki.index') }}">
                     <div
-                        class="{{ Request::is('admin/zakat/*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-transparent' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        class="{{ Request::is('admin/zakat/*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-transparent' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5 z-auto">
                         <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <title>shop</title>
@@ -44,10 +44,10 @@
             </li>
             @cannot('ketua_rt')
                 <li class="mt-0.5 w-full">
-                    <a class="{{ Request::is('admin/qurban/*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none' }} py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-slate-700"
+                    <a class="{{ Request::is('admin/qurban/*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none' }} py-2.7 rounded-lg text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-slate-700"
                         href="{{ route('pendaftarQurban.index') }}">
                         <div
-                            class="{{ Request::is('admin/qurban/*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-white' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                            class="{{ Request::is('admin/qurban/*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-transparent' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5 z-10">
                             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                                 viewBox="0 0 24 24">
@@ -62,10 +62,10 @@
             @endcannot
 
             <li class="mt-0.5 w-full">
-                <a class="{{ Request::is('admin/yatimPiatu*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none' }} py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-slate-700"
+                <a class="{{ Request::is('admin/yatimPiatu*') ? 'shadow-soft-xl font-semibold bg-slate-100' : 'shadow-none' }} py-2.7 text-sm rounded-lg ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors text-slate-700"
                     href="{{ route('yatimPiatu.index') }}">
                     <div
-                        class="{{ Request::is('admin/yatimPiatu*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-white' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                        class="{{ Request::is('admin/yatimPiatu*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-transparent' }} shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                             viewBox="0 0 24 24">
@@ -80,10 +80,10 @@
 
             @cannot('ketua_rt')
                 <li class="mt-0.5 w-full">
-                    <a class="{{ Request::is('admin/pengguna*') ? 'shadow-soft-xl bg-slate-100' : 'shadow-none' }} py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
+                    <a class="{{ Request::is('admin/pengguna*') ? 'shadow-soft-xl bg-slate-100' : 'shadow-none' }} py-2.7 text-sm ease-nav-brand rounded-lg my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
                         href="{{ route('pengguna.index') }}">
                         <div
-                            class="{{ Request::is('admin/pengguna*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-white' }} shadow-soft-2xl  mr-2 flex h-8 w-8 items-center justify-center rounded-lg  bg-center stroke-0 text-center xl:p-2.5">
+                            class="{{ Request::is('admin/pengguna*') ? 'bg-gradient-to-tl from-green-700 to-green-400 ' : 'bg-transparent' }} shadow-soft-2xl  mr-2 flex h-8 w-8 items-center justify-center rounded-lg  bg-center stroke-0 text-center xl:p-2.5">
 
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <path fill="#383838" fill-rule="evenodd"
@@ -141,7 +141,7 @@
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
                     href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <div
-                        class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
+                        class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-transparent bg-center stroke-0 text-center xl:p-2.5">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path
                                 d="M16 13v-2H8V8l-5 4 5 4v-3h8zM20 3H8c-1.1 0-2 .9-2 2v4h2V5h12v14H8v-4H6v4c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />

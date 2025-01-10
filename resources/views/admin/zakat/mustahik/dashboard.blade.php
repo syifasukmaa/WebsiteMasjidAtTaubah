@@ -116,15 +116,18 @@
 
                                                 </a>
 
-                                                <form action="{{ route('zakatMustahik.delete', $mustahik->id_mustahik) }}"
+                                                {{-- <form action="{{ route('zakatMustahik.delete', $mustahik->id_mustahik) }}"
                                                     method="POST" class="w-fit">
                                                     @csrf
                                                     @method('DELETE')
                                                     <input type="submit" value="Hapus" data-modal-hide="popup-modal"
-                                                        class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
-                                                </form>
-                                                {{-- 
+                                                        class="texzt-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
+                                                </form> --}}
+
+
                                                 <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                                                    data-id="{{ $mustahik->id_mustahik }}"
+                                                    data-action-url="{{ route('zakatMustahik.delete', ':id') }}"
                                                     class="block text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
                                                     type="button">
                                                     Hapus
@@ -176,7 +179,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div> --}}
+                                                </div>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -188,4 +191,21 @@
             </div>
         </div>
     </div>
+
+    {{-- confirmation delete --}}
+    {{-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const deleteButtons = document.querySelectorAll('[data-modal-toggle="popup-modal"]');
+            const modalForm = document.querySelector('#popup-modal form');
+            const baseActionUrl = "{{ route('zakatMustahik.delete', ':id') }}";
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = button.getAttribute('data-id');
+                    const actionUrl = baseActionUrl.replace(':id', id);
+                    modalForm.setAttribute('action', actionUrl);
+                });
+            });
+        });
+    </script> --}}
 @endsection

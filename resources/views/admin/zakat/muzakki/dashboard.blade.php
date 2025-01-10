@@ -131,18 +131,6 @@
                                                     <span
                                                         class="text-sm font-semibold leading-tight text-slate-800">{{ date('d-m-Y', strtotime($muzakki->created_at)) }}</span>
                                                 </td>
-
-                                                {{-- <td
-                                                    class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                                                    <span
-                                                        class="text-sm font-semibold leading-tight text-slate-800">{{ date('d-m-Y', strtotime($muzakki->tanggal_pembayaran)) }}</span>
-                                                </td>
-                                                <td
-                                                    class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                                                    <span
-                                                        class="text-sm font-semibold leading-tight text-slate-800">{{ $muzakki->penerima === null ? '-' : $zakat->penerima->name }}</span>
-                                                </td> --}}
-
                                                 <td class="flex p-2 align-middle border-b gap-x-2">
 
                                                     <a href="{{ route('admin.muzakki.detail', $muzakki->id_muzakki) }}"
@@ -163,6 +151,8 @@
                                                     </form> --}}
 
                                                     <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                                                        data-id="{{ $muzakki->id_muzakki }}"
+                                                        data-action-url="{{ route('admin.muzakki.delete', ':id') }}"
                                                         class="block text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
                                                         type="button">
                                                         Hapus
@@ -215,7 +205,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -228,5 +217,22 @@
             </div>
         </div>
     @endcan
+
+    {{-- confirmation delete --}}
+    {{-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const deleteButtons = document.querySelectorAll('[data-modal-toggle="popup-modal"]');
+            const modalForm = document.querySelector('#popup-modal form');
+            const baseActionUrl = "{{ route('admin.muzakki.delete', ':id') }}";
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = button.getAttribute('data-id');
+                    const actionUrl = baseActionUrl.replace(':id', id);
+                    modalForm.setAttribute('action', actionUrl);
+                });
+            });
+        });
+    </script> --}}
 
 @endsection
