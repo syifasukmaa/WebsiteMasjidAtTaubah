@@ -92,7 +92,7 @@
                                     <div class="col-span-4 mt-5">
                                         <input type="submit"
                                             class="inline-block px-4 py-2 text-sm font-semibold leading-tight text-white rounded-lg cursor-pointer bg-hijau2 hover:bg-hijau1"
-                                            value="Ubah Data ">
+                                            value="Edit">
                                     </div>
                                 </form>
                             </div>

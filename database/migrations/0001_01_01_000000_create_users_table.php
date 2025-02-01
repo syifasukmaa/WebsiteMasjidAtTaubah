@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->enum('role', ['admin', 'user', 'ketua_rt'])->default('user');
+            $table->uuid('id_RT')->nullable()->constrained(
+                table: 'r_t_s',
+                indexName: 'id_RT'
+            );
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

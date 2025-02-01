@@ -11,14 +11,13 @@
                     <div class="inline-flex shadow-sm" role="group">
                         @cannot('ketua_rt')
                             <a href="{{ route('pendaftarQurban.index') }}"
-                                class="{{ Request::is('admin/qurban/pendaftarQurban') ? 'bg-blue text-base text-white py-2.5' : 'text-sm py-3' }}  px-3 font-medium text-gray-900  border border-slate-600 hover:bg-sky-600 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white rounded-s-lg h-fit">
+                                class="{{ Request::is('admin/qurban/pendaftarQurban') ? 'text-sm py-3' : 'bg-blue-700 text-sm text-black py-3' }} px-3 py-2.5 font-medium text-gray-900  border border-slate-600 hover:bg-gray-200 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white rounded-s-lg h-fit">
                                 Kambing
                             </a>
                         @endcannot
 
-
                         <a href="{{ route('pendaftarQurban.kerbau') }}"
-                            class="{{ Request::is('/admin/qurban/pendaftarQurban/kerbau') ? 'bg-blue' : '' }} px-3 py-3 text-sm font-medium text-gray-900 border border-slate-600 hover:bg-gray-200 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white rounded-e-lg h-fit">
+                            class="{{ Request::is('/admin/qurban/pendaftarQurban/kerbau') ? '' : 'bg-blue text-sm text-white ' }} px-3 py-3 text-base font-medium text-gray-900 border border-slate-600 hover:bg-sky-600 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white rounded-e-lg h-fit">
                             Kerbau
                         </a>
                     </div>
@@ -44,7 +43,7 @@
                             </form>
                         </div>
 
-                        <a href="{{ route('pendaftarQurban.create') }}"
+                        <a href="{{ route('pendaftarQurban.kerbau.create') }}"
                             class="text-white bg-blue hover:bg-sky-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mt-2 md:mt-0 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-fit">Tambah
                             Data</a>
                     </div>
@@ -105,7 +104,7 @@
                                             <td
                                                 class="p-2 text-center capitalize align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                                 <span
-                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ $qurban->nama }}</span>
+                                                    class="text-sm font-semibold leading-tight text-slate-800">{{ $qurban->nama_satu }}</span>
                                             </td>
 
                                             <td
@@ -131,7 +130,7 @@
 
                                             <td class="flex p-2 align-middle border-b gap-x-2">
 
-                                                <a href="{{ route('pendaftarQurban.detail', $qurban->id_pendaftar_qurban) }}"
+                                                <a href="{{ route('pendaftarQurban.kerbau.detail', $qurban->id_pengqurban_sapi) }}"
                                                     class="inline-block p-2 py-2 text-sm font-semibold leading-tight text-white bg-yellow-300 rounded-lg hover:bg-yellow-400"><svg
                                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                         fill="currentColor" viewBox="0 0 24 24">
@@ -142,17 +141,9 @@
 
                                                 </a>
 
-                                                {{-- <form
-                                                    action="{{ route('pendaftarQurban.delete', $qurban->id_pendaftar_qurban) }}"
-                                                    method="POST" class="w-fit">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <input type="submit" value="Hapus" data-modal-hide="popup-modal"
-                                                        class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
-                                                </form> --}}
                                                 <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
-                                                    data-id="{{ $qurban->id_pendaftar_qurban }}"
-                                                    data-action-url="{{ route('pendaftarQurban.delete', ':id') }}"
+                                                    data-id="{{ $qurban->id_pengqurban_sapi }}"
+                                                    data-action-url="{{ route('pendaftarQurban.kerbau.delete', ':id') }}"
                                                     class="block text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
                                                     type="button">
                                                     Hapus
@@ -189,7 +180,7 @@
                                                                 <div class="flex items-center justify-center">
 
                                                                     <form
-                                                                        action="{{ route('pendaftarQurban.delete', $qurban->id_pendaftar_qurban) }}"
+                                                                        action="{{ route('pendaftarQurban.kerbau.delete', $qurban->id_pengqurban_sapi) }}"
                                                                         method="POST" class="w-fit">
                                                                         @csrf
                                                                         @method('DELETE')

@@ -43,12 +43,22 @@ Route::middleware(['auth', 'verified', 'adminRole'])->group(function () {
     Route::delete('/admin/zakat/mustahik/{id}', [MustahikController::class, 'delete'])->name('zakatMustahik.delete');
 
     Route::get('/admin/qurban/pendaftarQurban', [PendaftarQurbanController::class, 'index'])->name('pendaftarQurban.index');
+    Route::get('/admin/qurban/pendaftarQurban/kerbau', [PendaftarQurbanController::class, 'kerbau'])->name('pendaftarQurban.kerbau');
     Route::get('/admin/qurban/pendaftarQurban/create', [PendaftarQurbanController::class, 'create'])->name('pendaftarQurban.create');
+    Route::get('/admin/qurban/pendaftarQurban/kerbau/create', [PendaftarQurbanController::class, 'createKerbau'])->name('pendaftarQurban.kerbau.create');
     Route::get('/admin/qurban/pendaftarQurban/{id}', [PendaftarQurbanController::class, 'detail'])->name('pendaftarQurban.detail');
+    Route::get('/admin/qurban/pendaftarQurban/kerbau/{id}', [PendaftarQurbanController::class, 'detailKerbau'])->name('pendaftarQurban.kerbau.detail');
     Route::post('/admin/qurban/pendaftarQurban/add', [PendaftarQurbanController::class, 'store'])->name('pendaftarQurban.store');
+    Route::post('/admin/qurban/pendaftarQurban/addKerbau', [PendaftarQurbanController::class, 'storeKerbau'])->name('pendaftarQurban.kerbau.store');
     Route::get('/admin/qurban/pendaftarQurban/edit/{id}', [PendaftarQurbanController::class, 'edit'])->name('pendaftarQurban.edit');
     Route::put('/admin/qurban/pendaftarQurban/{id}', [PendaftarQurbanController::class, 'update'])->name('pendaftarQurban.update');
+    Route::get('/admin/qurban/pendaftarQurban/edit/kerbau/{id}', [PendaftarQurbanController::class, 'editKerbau'])->name('pendaftarQurban.kerbau.edit');
+    Route::put('/admin/qurban/pendaftarQurban/kerbau/{id}', [PendaftarQurbanController::class, 'updateKerbau'])->name('pendaftarQurban.kerbau.update');
     Route::delete('/admin/qurban/pendaftarQurban/{id}', [PendaftarQurbanController::class, 'delete'])->name('pendaftarQurban.delete');
+    Route::delete('/admin/qurban/pendaftarQurban/kerbau/{id}', [PendaftarQurbanController::class, 'deleteKerbau'])->name('pendaftarQurban.kerbau.delete');
+
+
+
 
     Route::get('/admin/yatimPiatu', [YatimPiatuController::class, 'index'])->name('yatimPiatu.index');
     Route::get('/admin/yatimPiatu/create', [YatimPiatuController::class, 'create'])->name('yatimPiatu.create');

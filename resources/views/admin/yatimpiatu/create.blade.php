@@ -1,7 +1,7 @@
 @extends('admin.layouts.main')
 @section('contents')
     @php
-        $title = 'Menambah Muzakki';
+        $title = 'Menambah Yatim Piatu';
     @endphp
     <div class="w-full px-12 py-5 mx-auto">
         <a href="{{ route('yatimPiatu.index') }}"

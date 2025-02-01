@@ -12,6 +12,15 @@ class YatimPiatuController extends Controller
     public function index()
     {
         $yatims = YatimPiatu::with('RTWarga')->latest();
+
+        $user = Auth::user();
+
+        if ($user->role == 'ketua_rt') { // Pastikan user adalah ketua RT
+            $yatims->where(function ($query) use ($user) {
+                $query->where('pembuatData_id', $user->id) // Data yang dibuat sendiri
+                    ->orWhere('id_RT', $user->id_RT);    // Data dari Ketua RT lain dengan RT yang sama
+            });
+        }
         if (request('search')) {
             $yatims->where('nama', 'like', '%' . request('search') . '%')
                 ->orWhere('nama_ibu', 'like', '%' . request('search') . '%')

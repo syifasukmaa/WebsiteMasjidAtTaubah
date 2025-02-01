@@ -17,13 +17,14 @@ class RTFactory extends Factory
     public function definition(): array
     {
 
-        static $index = 1;
+        static $index = 0;
+        $rt_list = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'];
 
-        $nomor_rt = str_pad($index, 2, '0', STR_PAD_LEFT); // Format ke '01', '02', ..., '10'
-        $index = $index < 10 ? $index + 1 : 1; // Reset ke '01' setelah '10'
+        $nomor_rt = $rt_list[$index]; // Ambil nilai dari array berdasarkan index
+        $index = ($index + 1) % count($rt_list); // Looping kembali ke awal setelah '10'
 
         return [
-            'nomor_rt' => $nomor_rt, // Return nomor RT
+            'nomor_rt' => $nomor_rt, // Return nomor RT dalam rentang 01-10
         ];
     }
 }

@@ -159,7 +159,7 @@
                                                                 </svg>
                                                                 <h3
                                                                     class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                                                                    Are you sure you want to delete this product?</h3>
+                                                                    Yakin ingin mengahapus data ini?</h3>
 
                                                                 <div class="flex items-center justify-center">
 

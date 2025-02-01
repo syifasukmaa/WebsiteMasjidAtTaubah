@@ -1,7 +1,7 @@
 @extends('admin.layouts.main')
 @section('contents')
     @php
-        $title = 'Daftar Zakat';
+        $title = 'Menambah Pengguna';
     @endphp
     <div class="w-full px-12 py-5 mx-auto">
         <a href="{{ route('pengguna.index') }}" class="px-4 py-2 text-base font-medium text-white bg-black rounded-md ">
@@ -69,9 +69,22 @@
 
                                             </select>
                                         </div>
+                                        <div>
+                                            <label for="id_RT"
+                                                class="block mb-2 text-base font-medium text-gray-900 dark:text-white">RT
+                                                Warga <span class="text-red-500">*</span>
+                                            </label>
+                                            <select id="id_RT" name="id_RT"
+                                                class="text-slate-700 bg-white border border-slate-400  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                @foreach ($rt as $rtwarga)
+                                                    <option value="{{ $rtwarga->id_RT }}">
+                                                        {{ $rtwarga->nomor_RT }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                     </div>
                                     <button type="submit"
-                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tambah</button>
+                                        class="w-full px-5 py-2 text-base font-medium text-center text-white rounded-lg bg-hijau2 hover:bg-hijau1 focus:ring-4 focus:outline-none focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tambah</button>
                                 </form>
 
                             </div>

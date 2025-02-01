@@ -956,35 +956,34 @@
                                 <li class="text-xl">
                                     <a class="flex items-center px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
                                         aria-current="page" href="#beranda">
-                                        <i class="mr-1 fa fa-chart-pie opacity-60"></i>
+
                                         Beranda
                                     </a>
                                 </li>
                                 <li class="text-xl">
                                     <a class="flex items-center px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
                                         aria-current="page" href="#jadwalSholat">
-                                        <i class="mr-1 fa fa-chart-pie opacity-60"></i>
+
                                         Jadwal Sholat
                                     </a>
                                 </li>
                                 <li>
                                     <a class="block px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
                                         href="#fasilitas">
-                                        <i class="mr-1 fa fa-user opacity-60"></i>
+
                                         Fasilitas
                                     </a>
                                 </li>
                                 <li>
                                     <a class="block px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
                                         href="#layanan">
-                                        <i class="mr-1 fas fa-user-circle opacity-60"></i>
+
                                         Layanan
                                     </a>
                                 </li>
                                 <li>
                                     <a class="block px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
                                         href="#galeri">
-                                        <i class="mr-1 fas fa-key opacity-60"></i>
                                         Galeri
                                     </a>
                                 </li>
@@ -1076,11 +1075,13 @@
                                 <p class="font-normal text-gray-700 dark:text-gray-400 isya">Pukul </p>
                             </div>
                         </div>
+                        <p class="inline-block px-4 mt-1 lg:px-14">*Sumber <a
+                                href="https://bimasislam.kemenag.go.id/jadwalshalat">https://bimasislam.kemenag.go.id/jadwalshalat</a>
+                        </p>
                     </div>
                     <div class="px-8 py-16 border border-gray-200 rounded-lg shadow-lg lg:mt-24 mt-14 bg-gradient-to-r from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
                         id="layanan">
-                        <h1
-                            class="text-2xl font-bold tracking-wide text-center text-white md:text-3xl hover:underline">
+                        <h1 class="text-2xl font-bold tracking-wide text-center text-white md:text-3xl hover:underline">
                             Layanan dan
                             Bantuan
                             Masjid</h1>
@@ -1166,6 +1167,19 @@
                                             <h3
                                                 class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
                                                 Kain Kafan</h3>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg" src="{{ asset('assets/img/keranda.jpg') }}"
+                                            alt="Keranda" />
+                                        <div class="p-5">
+                                            <h3
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
+                                                Keranda</h3>
 
                                         </div>
                                     </div>
@@ -1279,7 +1293,7 @@
                                 <a href="#beranda" class="hover:underline me-4 md:me-6">Beranda</a>
                             </li>
                             <li>
-                                <a href="#" class="hover:underline me-4 md:me-6">Jadwal Shglat</a>
+                                <a href="#" class="hover:underline me-4 md:me-6">Jadwal Sholat</a>
                             </li>
                             <li>
                                 <a href="#" class="hover:underline me-4 md:me-6">Fasilitas</a>

@@ -21,16 +21,31 @@
             button.addEventListener('click', function() {
                 // Ambil modal target
                 const modalId = button.getAttribute('data-modal-target');
-                const modal = document.querySelector(modalId);
+                const modal = document.querySelector(`#${modalId}`);
 
+                if (!modal) {
+                    console.error("Modal tidak ditemukan!");
+                    return;
+                }
                 // Ambil form di dalam modal
                 const modalForm = modal.querySelector('form');
 
+                if (!modalForm) {
+                    console.error("Form dalam modal tidak ditemukan!");
+                    return;
+                }
+
+
+
                 // Ambil URL dasar dari tombol
                 const baseActionUrl = button.getAttribute('data-action-url');
-
-                // Ganti placeholder ':id' dengan ID elemen yang akan dihapus
                 const id = button.getAttribute('data-id');
+
+                if (!baseActionUrl || !id) {
+                    console.error("Base URL atau ID tidak ditemukan!");
+                    return;
+                }
+                // Ganti placeholder ':id' dengan ID elemen yang akan dihapus
                 const actionUrl = baseActionUrl.replace(':id', id);
 
                 // Perbarui action pada form

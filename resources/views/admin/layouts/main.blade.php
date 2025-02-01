@@ -19,7 +19,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="{{ asset('assets/img/logoMasjid.png') }}" />
-    <title>Data Zakat</title>
+    <title>Masjid Jami At Taubah Juanda</title>
     @include('admin.layouts.partials.links')
     @vite('resources/css/app.css')
 </head>

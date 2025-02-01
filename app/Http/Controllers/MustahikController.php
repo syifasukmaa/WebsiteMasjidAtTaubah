@@ -12,6 +12,12 @@ class MustahikController extends Controller
     {
         $mustahik = Mustahik::latest();
 
+        $user = Auth::user();
+
+        if ($user->role == 'ketua_rt') { // Pastikan user adalah ketua RT
+            $mustahik->where('pembuatData_id', $user->id);
+        }
+
         if (request('search')) {
             $mustahik->where('nama_keluarga', 'like', '%' . request('search') . '%')
                 ->orWhere('kelompok', 'like', '%' . request('search') . '%')
@@ -38,6 +44,12 @@ class MustahikController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'nama_keluarga' => 'required',
+            'kelompok' => 'required',
+            'alamat' => 'required',
+        ]);
+
         $mustahik = new Mustahik();
 
         $mustahik->nama_keluarga = $request->nama_keluarga;

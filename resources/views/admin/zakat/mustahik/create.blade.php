@@ -29,6 +29,9 @@
                                             <input type="text" id="nama_keluarga" name="nama_keluarga"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="masukkan nama keluarga" />
+                                            @error('nama_keluarga')
+                                                <span class="text-red-500">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                         <div>
                                             <label for="kelompok"
@@ -42,6 +45,9 @@
                                                 <option value="mualaf">Mualaf</option>
                                                 <option value="amilin">Amilin</option>
                                             </select>
+                                            @error('kelompok')
+                                                <span class="text-red-500">{{ $message }}</span>
+                                            @enderror
                                         </div>
 
                                         <div>
@@ -70,6 +76,9 @@
                                             <textarea id="alamat" name="alamat"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="Isi Alamat Mustahik"></textarea>
+                                            @error('alamat')
+                                                <span class="text-red-500">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                         <div>
                                             <label for="nomor_hp"

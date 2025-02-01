@@ -82,7 +82,7 @@
                                                 Pembayaran</label>
                                             <input type="text" id="biaya" disabled
                                                 class="block w-full px-0 text-sm text-gray-900 capitalize border-none rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white"
-                                                placeholder="Jumlah Zakat" value="{{ $qurban->biaya }}" />
+                                                placeholder="Jumlah Zakat" value="{{ number_format($qurban->biaya) }}" />
                                         </div>
                                         <div>
                                             <label for="status_pembayaran"
@@ -123,7 +123,7 @@
                                     <div class="col-span-4 mt-5">
                                         <input type="submit"
                                             class="inline-block px-5 py-2.5 text-sm capitalize font-semibold leading-tight text-white bg-hijau2 hover:bg-hijau1 rounded-lg cursor-pointer"
-                                            value="Edit Data Pengqurban">
+                                            value="Edit">
                                     </div>
                                 </form>
                             </div>
