@@ -27,7 +27,7 @@ class MuzakkiFactory extends Factory
             'alamat' => fake()->address(),
             'keterangan' => fake()->text(),
             'penerima_id' => User::all()->random()->id,
-            'id_RT' => RT::all()->random()->id_RT
+            'id_RT' => RT::inRandomOrder()->first()->id_RT,
         ];
     }
 }

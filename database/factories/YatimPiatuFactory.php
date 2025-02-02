@@ -27,7 +27,7 @@ class YatimPiatuFactory extends Factory
             'biaya' => $this->faker->numberBetween(100000, 1000000),
             'alamat' => $this->faker->address,
             'pembuatData_id' => User::factory()->create()->id,
-            'id_RT' => RT::factory()->create()->id_RT
+            'id_RT' => RT::inRandomOrder()->first()->id_RT,
         ];
     }
 }

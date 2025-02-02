@@ -38,8 +38,8 @@ class PengqurbanSapiFactory extends Factory
             'biaya' => fake()->numberBetween(100000, 1000000),
             'status_pembayaran' => fake()->randomElement(['Lunas', 'Belum Lunas']),
             'pembuatData_id' => User::factory()->create()->id,
-            'id_RT' =>  RT::factory()->create()->id_RT,
             'nomor_antrian' => fake()->numberBetween(1, 100),
+            'id_RT' => RT::inRandomOrder()->first()->id_RT,
         ];
     }
 }

@@ -1007,7 +1007,7 @@
                                 ada di Kota
                                 Depok, terletak di Jalan. Ir. H. Juanda No.Km.2, RW.16, Kel. Baktijaya, Kec. Sukmajaya.
                             </p>
-                            <a href=""
+                            <a href="https://wa.me/6281318806256"
                                 class="p-3 mt-4 text-white transition-all ease-in-out rounded-md shadow-md md:mt-8 btn btn-primary bg-hijau1 w-fit hover:bg-hijau2 hover:scale-105">Menyewa
                                 Gedung Serba Guna</a>
                         </div>
