@@ -954,35 +954,35 @@
                             class="items-center justify-end overflow-hidden transition-all duration-500 ease-soft lg-max:max-h-0 basis-full lg:flex lg:basis-auto">
                             <ul class="flex flex-col justify-end pl-0 mx-auto mb-0 list-none lg:flex-row xl:ml-auto">
                                 <li class="text-xl">
-                                    <a class="flex items-center px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
+                                    <a class="flex items-center px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
                                         aria-current="page" href="#beranda">
 
                                         Beranda
                                     </a>
                                 </li>
                                 <li class="text-xl">
-                                    <a class="flex items-center px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
+                                    <a class="flex items-center px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
                                         aria-current="page" href="#jadwalSholat">
 
                                         Jadwal Sholat
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="block px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
+                                    <a class="block px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
                                         href="#fasilitas">
 
                                         Fasilitas
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="block px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
+                                    <a class="block px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
                                         href="#layanan">
 
                                         Layanan
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="block px-4 py-2 mr-2 text-sm font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
+                                    <a class="block px-4 py-2 mr-2 text-lg font-normal transition-all hover:underline hover:font-semibold lg-max:opacity-0 duration-250 ease-soft-in-out text-slate-700 lg:px-2"
                                         href="#galeri">
                                         Galeri
                                     </a>
@@ -1008,21 +1008,28 @@
                                 Depok, terletak di Jalan. Ir. H. Juanda No.Km.2, RW.16, Kel. Baktijaya, Kec. Sukmajaya.
                             </p>
                             <a href="https://wa.me/6281318806256"
-                                class="p-3 mt-4 text-white transition-all ease-in-out rounded-md shadow-md md:mt-8 btn btn-primary bg-hijau1 w-fit hover:bg-hijau2 hover:scale-105">Menyewa
+                                class="p-3 mt-4 text-white transition-all ease-in-out rounded-md shadow-md md:mt-8 btn btn-primary bg-hijau2 w-fit hover:bg-hijau3 hover:scale-105">Menyewa
                                 Gedung Serba Guna</a>
                         </div>
                     </header>
 
-                    <div class="mt-14" id="jadwalSholat">
+                    <div class="relative mt-14" id="jadwalSholat">
+                        <img src="{{ asset('assets/img/pattern1.png') }}"
+                            class="absolute -top-[55px] right-0 w-[20%] md:w-[15%] lg:w-[8%]" alt="patter islamic">
+                        <img src="{{ asset('assets/img/pattern1.png') }}"
+                            class="absolute -top-[55px] left-0 w-[20%] md:w-[15%] lg:w-[8%]" alt="patter islamic">
+                        <img src="{{ asset('assets/img/pattern2.png') }}"
+                            class="absolute -bottom-[50px] lg:-bottom-[90px] inset-x-0 w-[10%] md:w-[8%] lg:w-[5%]"
+                            alt="patter islamic">
                         <h1
                             class="text-2xl font-bold tracking-wide text-center md:text-3xl text-hijau1 hover:underline">
                             Jadwal Sholat
                         </h1>
                         <p class="text-lg text-center text-hijau2">Depok, Sukmajaya</p>
                         <p class="text-lg text-center text-hijau2" id="date_sholat">Hari</p>
-                        <div class="grid grid-cols-6 gap-1 mt-5 lg:px-14 lg:gap-3">
+                        <div class="grid grid-cols-6 gap-1 mt-9 lg:px-14 lg:gap-3">
                             <div
-                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-gray-100">
+                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
                                 <h5
                                     class="mb-2 text-sm font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌘
@@ -1031,7 +1038,7 @@
                                 <p class="font-normal text-gray-700 dark:text-gray-400 imsak">Pukul </p>
                             </div>
                             <div
-                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-slate-300 hover:bg-gray-100">
+                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-hijau3 hover:bg-hijau2">
                                 <h5
                                     class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌅
@@ -1040,7 +1047,7 @@
                                 <p class="font-normal text-gray-700 dark:text-gray-400 subuh">Pukul </p>
                             </div>
                             <div
-                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-gray-100">
+                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
                                 <h5
                                     class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌞
@@ -1049,7 +1056,7 @@
                                 <p class="font-normal text-gray-700 dark:text-gray-400 dzuhur">Pukul </p>
                             </div>
                             <div
-                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-slate-300 hover:bg-gray-100">
+                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-hijau3 hover:bg-hijau4">
                                 <h5
                                     class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌤️
@@ -1058,7 +1065,7 @@
                                 <p class="font-normal text-gray-700 dark:text-gray-400 ashar">Pukul </p>
                             </div>
                             <div
-                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-gray-100">
+                                class="block p-3 text-center bg-white border border-gray-200 rounded-lg shadow lg:p-6 hover:bg-hijau4">
                                 <h5
                                     class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌌
@@ -1067,7 +1074,7 @@
                                 <p class="font-normal text-gray-700 dark:text-gray-400 maghrib">Pukul </p>
                             </div>
                             <div
-                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-slate-300 hover:bg-gray-100">
+                                class="block p-3 text-center border border-gray-200 rounded-lg shadow lg:p-6 bg-hijau3 hover:bg-hijau4">
                                 <h5
                                     class="mb-2 text-sm font-semibold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
                                     🌙 Isya
@@ -1075,76 +1082,77 @@
                                 <p class="font-normal text-gray-700 dark:text-gray-400 isya">Pukul </p>
                             </div>
                         </div>
-                        <p class="inline-block px-4 mt-1 lg:px-14">*Sumber <a
-                                href="https://bimasislam.kemenag.go.id/jadwalshalat">https://bimasislam.kemenag.go.id/jadwalshalat</a>
+                        <p class="px-4 mt-4 text-center lg:px-14">*Sumber <a
+                                href="https://bimasislam.kemenag.go.id/jadwalshalat"
+                                class="hover:text-green-600">https://bimasislam.kemenag.go.id/jadwalshalat</a>
                         </p>
                     </div>
                     <div class="px-8 py-16 border border-gray-200 rounded-lg shadow-lg lg:mt-24 mt-14 bg-gradient-to-r from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
                         id="layanan">
-                        <h1 class="text-2xl font-bold tracking-wide text-center text-white md:text-3xl hover:underline">
-                            Layanan dan
-                            Bantuan
-                            Masjid</h1>
+                        <div class="absolute inset-0 z-0 w-full h-full bg-center bg-cover invert-20 hue-rotat3-90 contrast-75"
+                            style="background-image: url('{{ asset('assets/img/IMG_2350.jpg') }}');">
+                            <div class="absolute inset-0 opacity-50 bg-hijau1"></div>
+                        </div>
+                        <div class="relative z-10 flex flex-col items-center justify-center p-5 text-white rounded-lg">
+                            <h1
+                                class="text-2xl font-bold tracking-wide text-center text-white md:text-3xl hover:underline">
+                                Layanan dan
+                                Bantuan
+                                Masjid</h1>
+                        </div>
+
                         <div class="mt-10 md:mt-14 swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div
-                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        class="max-w-sm transition ease-in-out bg-white  rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
                                         <img class="rounded-t-lg" src="{{ asset('assets/img/zakat.jpeg') }}"
                                             alt="zakat" />
                                         <div class="p-5">
                                             <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
-                                                Pembayaran Zakat</h3>
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-hijau4">
+                                                Pembayaran Zakat
+                                            </h3>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div
-                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        class="max-w-sm transition ease-in-out bg-white  rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
                                         <img class="rounded-t-lg" src="{{ asset('assets/img/hewanqurban.jpeg') }}"
-                                            alt=" Pendaftaran Hewan Qurban" />
+                                            alt="hewan qurban" />
                                         <div class="p-5">
                                             <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
-                                                Pendaftaran Hewan Qurban</h3>
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-hijau4">
+                                                Pendaftaran Hewan Qurban
+                                            </h3>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div
-                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        class="max-w-sm transition ease-in-out bg-white  rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
                                         <img class="rounded-t-lg" src="{{ asset('assets/img/santunan.jpg') }}"
-                                            alt="Santunan Yatim Piatu" />
+                                            alt="santunan" />
                                         <div class="p-5">
                                             <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
-                                                Santunan Yatim Piatu</h3>
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-hijau4">
+                                                Santunan Yatim Piatu
+                                            </h3>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div
-                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg" src="{{ asset('assets/img/pengajianBulanan.jpg') }}"
-                                            alt=" Pengajian Bulana" />
+                                        class="max-w-sm transition ease-in-out bg-white  rounded-lg shadow-xl bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 dark:bg-opacity-30 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
+                                        <img class="rounded-t-lg"
+                                            src="{{ asset('assets/img/penggalanganDana.jpg') }}"
+                                            alt="penggalangan dana" />
                                         <div class="p-5">
                                             <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
-                                                Pengajian Bulanan</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg" src="{{ asset('assets/img/penggalanganDana.jpg') }}"
-                                            alt=" Penggalangan Dana" />
-                                        <div class="p-5">
-                                            <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
-                                                Penggalangan Dana</h3>
-
+                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-hijau4">
+                                                Penggalangan Dana
+                                            </h3>
                                         </div>
                                     </div>
                                 </div>
@@ -1153,93 +1161,156 @@
                         </div>
 
                     </div>
-                    <div class="px-8 py-16 lg:mt-24 mt-14" id="fasilitas">
-                        <h1 class="text-3xl font-bold tracking-wide text-center text-hijau1 hover:underline">Fasilitas
+                    <div class="relative px-8 py-16 md:px-14 lg:px-28 lg:mt-24 mt-10" id="fasilitas">
+                        <img src="{{ asset('assets/img/pattern4.png') }}"
+                            class="absolute -top-10 lg:-top-[95px] right-0 w-[40%] lg:w-[20%] md:w-[25%]"
+                            alt="patter islamic">
+                        <img src="{{ asset('assets/img/pattern3.png') }}"
+                            class="absolute -top-[40px] lg:-top-[75px] left-2 lg:left-4 w-[20%] lg:w-[8%] md:w-[15%]"
+                            alt="patter islamic">
+                        <h1 class="text-3xl font-bold tracking-wide text-center uppercase text-hijau1 hover:underline">
+                            Fasilitas
                             Masjid</h1>
-                        <div class="mt-10 lg:mt-14 swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div
-                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg" src="{{ asset('assets/img/kainkafan.jpg') }}"
-                                            alt="Kain Kafan" />
-                                        <div class="p-5">
-                                            <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
-                                                Kain Kafan</h3>
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg" src="{{ asset('assets/img/keranda.jpg') }}"
-                                            alt="Keranda" />
-                                        <div class="p-5">
-                                            <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
-                                                Keranda</h3>
 
+                        <div id="default-carousel" class="relative w-full mt-10 lg:mt-14" data-carousel="static">
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-96 overflow-hidden rounded-lg  md:h-[500px]">
+                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                    <img src="{{ asset('assets/img/GSM.jpg') }}"
+                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                        alt="Gedung Serba Guna">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
+                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Gedung Serba Guna
+                                            </h2>
+                                            <p class="mt-2">Gedung untuk pernikahan, pengajian, acara hari besar.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg" src="{{ asset('assets/img/GSM.jpg') }}"
-                                            alt="Fasilitas 2" />
-                                        <div class="p-5">
-                                            <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
-                                                Gedung Serba Guna</h3>
 
+                                <!-- Item 4 -->
+                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                    <img src="{{ asset('assets/img/tempatsholat.jpg') }}"
+                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                        alt="tempat sholat">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
+                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Tempat Sholat</h2>
+                                            <p class="mt-2">Tempat sholat yang tersedia dengan 2 lantai.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg" src="{{ asset('assets/img/tempatsholat.jpg') }}"
-                                            alt="tempat sholat" />
-                                        <div class="p-5">
-                                            <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
-                                                Tempat Sholat</h3>
+
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                    <img src="{{ asset('assets/img/keranda.jpg') }}"
+                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                        alt="keranda">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
+                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Keranda</h2>
+                                            <p class="mt-2">Keranda untuk mengangkut jenazah tersedia di masjid.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg" src="{{ asset('assets/img/toilet.jpg') }}"
-                                            alt="Fasilitas 3" />
-                                        <div class="p-5">
-                                            <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
-                                                Toilet Wanita dan Pria</h3>
+
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                    <img src="{{ asset('assets/img/kainkafan.jpg') }}"
+                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
+                                        alt="kain kafan">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
+                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Kain Kafan</h2>
+                                            <p class="mt-2">Kain kafan tersedia untuk keperluan jenazah.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div
-                                        class="max-w-sm transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-4 hover:-translate-x-2">
-                                        <img class="rounded-t-lg" src="{{ asset('assets/img/AC.jpg') }}"
-                                            alt="Fasilitas 3" />
-                                        <div class="p-5">
-                                            <h3
-                                                class="mb-2 text-xl font-semibold tracking-normal text-center text-gray-900 md:text-2xl dark:text-white">
-                                                Air Conditioner</h3>
+
+                                <!-- Item 5 -->
+                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                    <img src="{{ asset('assets/img/toilet.jpg') }}"
+                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                        alt="toilet">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
+                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Toilet</h2>
+                                            <p class="mt-2">Tersedia toilet untuk laki - laki di lantai bawah dan
+                                                perempuan di lantai atas.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Add more slides as needed -->
+                                <!-- Item 6 -->
+                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                    <img src="{{ asset('assets/img/AC.jpg') }}"
+                                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                        alt="AC">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="p-4 text-black bg-white backdrop-blur-sm bg-opacity-30 rounded-lg">
+                                            <h2 class="text-2xl font-bold text-hijau1 text-center">Air Conditioner</h2>
+                                            <p class="mt-2">Masjid dilengkapi dengan AC agar jamaah nyaman dalam
+                                                beribadah.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- Slider indicators -->
+                            <div
+                                class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2 rtl:space-x-reverse">
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="true"
+                                    aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                    aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                    aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                    aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                    aria-label="Slide 5" data-carousel-slide-to="4"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                    aria-label="Slide 6" data-carousel-slide-to="5"></button>
+                            </div>
+                            <!-- Slider controls -->
+                            <button type="button"
+                                class="absolute top-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer start-0 group focus:outline-none"
+                                data-carousel-prev>
+                                <span
+                                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 6 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M5 1 1 5l4 4" />
+                                    </svg>
+                                    <span class="sr-only">Previous</span>
+                                </span>
+                            </button>
+                            <button type="button"
+                                class="absolute top-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer end-0 group focus:outline-none"
+                                data-carousel-next>
+                                <span
+                                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 6 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 9 4-4-4-4" />
+                                    </svg>
+                                    <span class="sr-only">Next</span>
+                                </span>
+                            </button>
                         </div>
+
                     </div>
-                    <div class="px-8 py-16 border border-gray-200 rounded-lg shadow-lg lg:mt-24 mt-14 bg-gradient-to-r from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
+                    <div class="px-8 py-16  border border-gray-200 rounded-lg shadow-lg lg:mt-24 mt-14 bg-gradient-to-r relative from-hijau3 via-hijau2 to-hijau3 bg-opacity-30 backdrop-blur-2xl"
                         id="galeri">
-                        <h1 class="text-3xl font-bold tracking-wide text-center text-white hover:underline">Galeri
+                        <img src="{{ asset('assets/img/pattern5.png') }}"
+                            class="absolute -top-[10px] right-0 lg:w-[8%] w-[20%] md:w-[15%]" alt="patter islamic">
+                        <img src="{{ asset('assets/img/pattern6.png') }}"
+                            class="absolute top-[5px] left-0 lg:w-[8%] w-[20%] md:w-[15%]" alt="patter islamic">
+                        <h1 class="text-3xl font-bold tracking-wide text-center text-white hover:underline uppercase">
+                            Galeri
                             Masjid</h1>
                         <div class="grid grid-cols-2 gap-4 mt-8 md:mt-14 md:grid-cols-3">
                             <div>
@@ -1270,7 +1341,8 @@
                     </div>
 
                     <div class="px-3 py-16 md:px-8 lg:mt-24 mt-14">
-                        <h1 class="mb-8 text-3xl font-bold tracking-wide text-center text-hijau1">Lokasi Masjid</h1>
+                        <h1 class="mb-8 text-3xl font-bold tracking-wide text-center uppercase text-hijau1">Lokasi
+                            Masjid</h1>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4368505855245!2d106.8479536!3d-6.3799304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec77d6134e97%3A0xf5bedde41bf5124e!2sMasjid%20Jami'%20At-Taubah!5e0!3m2!1sen!2sid!4v1612309600000!5m2!1sen!2sid"
                             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
